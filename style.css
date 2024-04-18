@@ -1,0 +1,75 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(sky.jpeg);
+    height: 100vh;
+    
+}
+.sun{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: #fdd835;
+    border-radius: 50%;
+    box-shadow: 0 0 60px #fdd835;
+}
+.earth{
+    position:absolute;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: #2196f3;
+    top:50%;
+    left:50%;
+    transform-origin: top left;
+    animation: rotate-earth 20s linear infinite ;
+}
+.moon{
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    background-color: #bdbdbd;
+    box-shadow: 0 0 50px #ffff;
+    top:110%;
+    left:100%;
+    /* transform-origin: top left; */
+    animation: rotate-moon 6s linear infinite  ;
+
+}
+/* .earth::before{
+   content: "";
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   width: 100px;
+   height: 100px;
+   border: 2px dashed rgba(255,255,255.0.5);
+   border-radius: 50%; 
+   box-sizing: border-box;
+   transform-origin:0 0 ;
+   transform: translateX(-50px,50px);
+} */
+
+@keyframes rotate-earth{
+    0%{
+        transform:rotate(0deg) translateX(100px);
+    }
+    100%{
+        transform: rotate(360deg) translateX(100px);
+    }
+}
+@keyframes rotate-moon{
+    0%{
+        transform:rotate(0deg) translateX(100px);
+    }
+    100%{
+        transform: rotate(360deg) translateX(100px);
+    }
+}
